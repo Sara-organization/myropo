@@ -1,0 +1,12 @@
+version: 2.1
+orbs:
+  dmz: eddiewebb/dmz@0.0.7
+jobs:
+  build:
+    docker:
+      - image: cimg/node:17.2.0
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
